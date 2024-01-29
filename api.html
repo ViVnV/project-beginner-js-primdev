@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="api.css">
+    <title>Food Recipe</title>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <div class="nav-bar">
+        <nav>
+            <h2 class="logo">Food <span>Recipe</span></h2>
+            <ul>
+                <li><a href="index.html">Create Your Own</a></li>
+                <li><a href="api.html">Explore More</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Bagian pencarian resep -->
+    <header>
+        <div class="search">
+            <input type="text" id="searchInput" placeholder="Enter an ingredient...">
+            <button id="searchButton">Search</button>
+        </div>
+    </header>
+
+    <!-- Daftar Resep -->
+    <div id="mealList" class="meal-list"></div>
+    <div class="modal-container">
+        <button id="recipeCloseBtn" class="close-button">&times;</button>
+        <div class="meal-details-content">
+            <!-- Detail dari resep yang diperoleh dari fetch api di JavaScript akan ditampilkan disini -->
+        </div>
+    </div>
+
+    
+    <script src="api.js"></script>
+</body>
+</html>
+

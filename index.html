@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/1c51f95eb5.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Food Recipe</title>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <div class="nav-bar">
+    <nav>
+        <h2 class="logo">Food <span>Recipe</span></h2>
+        <ul>
+            <li><a href="index.html">Create Your Own</a></li>
+            <li><a href="api.html">Explore More</a></li>
+        </ul>
+    </nav>
+</div>
+
+  <!-- Tombol untuk memunculkan formulir input resep -->
+  <header>
+    <button id="addRecipeButton" class="add-recipe-button" onclick="toggleRecipeForm()">Add Your Own Recipe</button>
+  </header>
+  
+
+  <!-- Formulir input resep -->
+  <div class="modal-container" id="addRecipeModal">
+    <button id="recipeCloseFormButton" class="close-button">&times;</button>
+    <h2>Add Your Recipe</h2>
+    <form id="recipeForm" class="recipe-form">
+        <label for="recipeName">Recipe Name</label>
+          <input type="text" id="recipeName" required>
+    
+        <label for="ingredients">Ingredients</label>
+          <textarea id="ingredients" rows="4" required></textarea>
+    
+        <label for="steps">Steps</label>
+        <textarea id="steps" rows="4" required></textarea>
+    
+        <label for="image"><i class="fa-regular fa-image"></i>Image</label>
+          <input type="file" id="image" required>
+        <img id="imageDisplay" class="image-display">
+    
+        <button type="button" onclick="saveRecipe()">Update Recipe</button>
+    </form>
+  </div>
+
+  <!-- Daftar Resep -->
+  <div id="recipeList" class="recipe-list"></div>
+    <div class="modal-container" id="recipeDetailsModal">
+    <button id="recipeCloseDetailsButton" class="close-button">&times;</button>
+      <div class="recipe-details-content">
+        <!-- Hasil dari inputan informasi detail resep akan ditampilkan disini -->
+      </div>
+    </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
